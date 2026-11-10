@@ -1,0 +1,143 @@
+{
+  "final_model": "Gradient Boosting",
+  "selection_rule": "lowest cross-validated RMSE on training data (test set not used)",
+  "baseline_average_price_test": {
+    "rmse": 1.1448563543099792,
+    "mae": 0.9060685490007149,
+    "r2": -0.00021908714592466794
+  },
+  "final_model_test": {
+    "rmse": 0.44092153513272386,
+    "mae": 0.28602780720921234,
+    "r2": 0.8516403631446594,
+    "rmse_95_interval": [
+      0.42158639310629537,
+      0.4606082808818855
+    ],
+    "train_rmse": 0.3182039930754898
+  },
+  "new_area_check": {
+    "random_split_rmse": 0.4471295792722344,
+    "random_split_r2": 0.8503687851064088,
+    "new_area_rmse": 0.7191062297001023,
+    "new_area_r2": 0.5925542632376597
+  },
+  "error_by_price_band": [
+    {
+      "Band": "under $150k",
+      "Houses": 1516,
+      "MAE": 0.19517897950383442,
+      "Average_Error": 0.12665162070735445
+    },
+    {
+      "Band": "$150k-250k",
+      "Houses": 1487,
+      "MAE": 0.241168238523849,
+      "Average_Error": 0.0446889065443692
+    },
+    {
+      "Band": "$250k-350k",
+      "Houses": 620,
+      "MAE": 0.3727305843850105,
+      "Average_Error": -0.06857946673199855
+    },
+    {
+      "Band": "$350k-500k",
+      "Houses": 321,
+      "MAE": 0.5814571838467869,
+      "Average_Error": -0.3632813692021947
+    },
+    {
+      "Band": "capped at $500k",
+      "Houses": 184,
+      "MAE": 0.5895302511593855,
+      "Average_Error": -0.5481099225291427
+    }
+  ],
+  "feature_importance_rmse_increase": {
+    "Latitude": 0.5532169994321099,
+    "Longitude": 0.5270879888453492,
+    "MedInc": 0.3798983912786613,
+    "AveOccup": 0.18689102442704936,
+    "AveRooms": 0.1207168592478483,
+    "HouseAge": 0.04747151824713348,
+    "AveBedrms": 0.01122469114646919,
+    "Population": 0.009276732882165618
+  },
+  "feature_engineering_check": [
+    {
+      "Model": "Linear Regression",
+      "CV_RMSE_Raw": 0.7205095145054944,
+      "CV_RMSE_Engineered": 0.6433891862421256,
+      "Improvement_Percent": 10.70358221657886
+    },
+    {
+      "Model": "Ridge",
+      "CV_RMSE_Raw": 0.7205090731464324,
+      "CV_RMSE_Engineered": 0.6433881889649168,
+      "Improvement_Percent": 10.703665929525636
+    },
+    {
+      "Model": "Random Forest",
+      "CV_RMSE_Raw": 0.5008417247505099,
+      "CV_RMSE_Engineered": 0.4663785879247942,
+      "Improvement_Percent": 6.881043475937083
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV_RMSE_Raw": 0.45998627489272115,
+      "CV_RMSE_Engineered": 0.4471295792722344,
+      "Improvement_Percent": 2.7950172259998864
+    }
+  ],
+  "comparison": [
+    {
+      "Model": "Linear Regression",
+      "Settings": "defaults",
+      "CV_RMSE": 0.6433891862421256,
+      "CV_RMSE_Std": 0.01338714268521175,
+      "CV_MAE": 0.46631896557196145,
+      "CV_R2": 0.6901715414737277,
+      "Train_RMSE": 0.6426351489904264,
+      "Test_RMSE": 0.6531163834541374,
+      "Test_MAE": 0.47299810153215716,
+      "Test_R2": 0.6744825337591706
+    },
+    {
+      "Model": "Ridge",
+      "Settings": "alpha=1",
+      "CV_RMSE": 0.6433881889649168,
+      "CV_RMSE_Std": 0.013388338570271472,
+      "CV_MAE": 0.46631778432535975,
+      "CV_R2": 0.6901725396456261,
+      "Train_RMSE": 0.6426352448135081,
+      "Test_RMSE": 0.6531166334099338,
+      "Test_MAE": 0.47299580109338796,
+      "Test_R2": 0.6744822845999239
+    },
+    {
+      "Model": "Random Forest",
+      "Settings": "defaults",
+      "CV_RMSE": 0.4663785879247942,
+      "CV_RMSE_Std": 0.009726572739385932,
+      "CV_MAE": 0.3011422106112391,
+      "CV_R2": 0.8372365220633986,
+      "Train_RMSE": 0.2192126791929587,
+      "Test_RMSE": 0.45828635164849,
+      "Test_MAE": 0.2924557694976482,
+      "Test_R2": 0.8397245565356062
+    },
+    {
+      "Model": "Gradient Boosting",
+      "Settings": "learning_rate=0.05, max_leaf_nodes=63",
+      "CV_RMSE": 0.4471295792722344,
+      "CV_RMSE_Std": 0.0107021169248736,
+      "CV_MAE": 0.2901940361768616,
+      "CV_R2": 0.8503687851064088,
+      "Train_RMSE": 0.3182039930754898,
+      "Test_RMSE": 0.44092153513272386,
+      "Test_MAE": 0.28602780720921234,
+      "Test_R2": 0.8516403631446594
+    }
+  ]
+}

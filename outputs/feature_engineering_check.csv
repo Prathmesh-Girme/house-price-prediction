@@ -1,0 +1,5 @@
+Model,CV_RMSE_Raw,CV_RMSE_Engineered,Improvement_Percent
+Linear Regression,0.7205,0.6434,10.7036
+Ridge,0.7205,0.6434,10.7037
+Random Forest,0.5008,0.4664,6.881
+Gradient Boosting,0.46,0.4471,2.795

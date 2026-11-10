@@ -1,0 +1,5 @@
+Model,Settings,CV_RMSE,CV_RMSE_Std,CV_MAE,CV_R2,Train_RMSE,Test_RMSE,Test_MAE,Test_R2
+Linear Regression,defaults,0.6434,0.0134,0.4663,0.6902,0.6426,0.6531,0.473,0.6745
+Ridge,alpha=1,0.6434,0.0134,0.4663,0.6902,0.6426,0.6531,0.473,0.6745
+Random Forest,defaults,0.4664,0.0097,0.3011,0.8372,0.2192,0.4583,0.2925,0.8397
+Gradient Boosting,"learning_rate=0.05, max_leaf_nodes=63",0.4471,0.0107,0.2902,0.8504,0.3182,0.4409,0.286,0.8516

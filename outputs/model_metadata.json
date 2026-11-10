@@ -1,0 +1,101 @@
+{
+  "model_name": "Gradient Boosting",
+  "model_class": "HistGradientBoostingRegressor",
+  "model_parameters": {
+    "categorical_features": "from_dtype",
+    "early_stopping": true,
+    "interaction_cst": null,
+    "l2_regularization": 0.0,
+    "learning_rate": 0.05,
+    "loss": "squared_error",
+    "max_bins": 255,
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_iter": 500,
+    "max_leaf_nodes": 63,
+    "min_samples_leaf": 20,
+    "monotonic_cst": null,
+    "n_iter_no_change": 10,
+    "quantile": null,
+    "random_state": 42,
+    "scoring": "loss",
+    "tol": 1e-07,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "selection": {
+    "rule": "lowest cross-validated RMSE on training data",
+    "cv_rmse": 0.4471295792722344
+  },
+  "trained_at": "2026-11-03T09:19:52",
+  "python_version": "3.12.3",
+  "scikit_learn_version": "1.8.0",
+  "pandas_version": "3.0.2",
+  "training_rows": 16512,
+  "features": [
+    "MedInc",
+    "HouseAge",
+    "AveRooms",
+    "AveBedrms",
+    "Population",
+    "AveOccup",
+    "Latitude",
+    "Longitude"
+  ],
+  "engineered_features": [
+    "BedroomRatio",
+    "RoomsPerPerson",
+    "LogPopulation",
+    "DistToNearestCity_km",
+    "DistToSF_km",
+    "DistToLA_km"
+  ],
+  "training_ranges": {
+    "MedInc": [
+      0.4999,
+      15.0001
+    ],
+    "HouseAge": [
+      1.0,
+      52.0
+    ],
+    "AveRooms": [
+      0.8888888888888888,
+      141.9090909090909
+    ],
+    "AveBedrms": [
+      0.3333333333333333,
+      25.63636363636364
+    ],
+    "Population": [
+      3.0,
+      35682.0
+    ],
+    "AveOccup": [
+      0.6923076923076923,
+      1243.3333333333333
+    ],
+    "Latitude": [
+      32.55,
+      41.95
+    ],
+    "Longitude": [
+      -124.35,
+      -114.31
+    ]
+  },
+  "target_unit": "median house value in units of $100,000",
+  "price_cap": 5.0,
+  "test_metrics": {
+    "rmse": 0.44092153513272386,
+    "mae": 0.28602780720921234,
+    "r2": 0.8516403631446594,
+    "rmse_95_interval": [
+      0.42158639310629537,
+      0.4606082808818855
+    ],
+    "train_rmse": 0.3182039930754898
+  },
+  "disclaimer": "Educational project on 1990 census data. Not for real valuation."
+}
